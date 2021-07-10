@@ -29,19 +29,75 @@ export const MyCharacter = ({ character }: Props) => {
     };
 
     return (
-        <Card>
-            <Card className={styles.myCharacter} style={{ width: '50vh' }} title={'Character'}>
-                <Card.Grid>
-                    <Statistic title={'Name'} value={character.name} />
-                </Card.Grid>
+        <Card title={'Character'} type={'inner'}>
+            <Card
+                className={styles.myCharacter}
+                style={{ width: '50vh' }}
+                title={<Input defaultValue={character.name} />}
+                type={'inner'}
+            >
                 <Card.Grid>
                     <Statistic title={'Level'} value={character.level} />
+                </Card.Grid>
+                <Card.Grid>
+                    <Statistic title={'Constellation'} value={character.level} />
                 </Card.Grid>
             </Card>
 
-            <Card className={styles.myCharacter} style={{ width: '50vh' }} title={'Weapon'}>
+            <Card
+                className={styles.myCharacter}
+                style={{ width: '50vh' }}
+                title={'Talents'}
+                type={'inner'}
+            >
                 <Card.Grid>
-                    <Statistic title={'Level'} value={character.level} />
+                    <Statistic title={'Normal Attack'} value={character.talents.normalAttack} />
+                </Card.Grid>
+                <Card.Grid>
+                    <Statistic title={'Elemental Skill'} value={character.talents.elementalSkill} />
+                </Card.Grid>
+                <Card.Grid>
+                    <Statistic title={'Elemental Burst'} value={character.talents.elementalBurst} />
+                </Card.Grid>
+            </Card>
+
+            <Card
+                className={styles.myCharacter}
+                style={{ width: '50vh' }}
+                title={'Weapon'}
+                type={'inner'}
+            >
+                <Card.Grid>
+                    <span>Name: {character.weapon?.name}</span>
+                </Card.Grid>
+                <Card.Grid>
+                    <Statistic title={'Rarity'} value={character.weapon?.rarity} />
+                </Card.Grid>
+                <Card.Grid>
+                    <Statistic title={'Level'} value={character.weapon?.level} />
+                </Card.Grid>
+            </Card>
+
+            <Card
+                className={styles.myCharacter}
+                style={{ width: '50vh' }}
+                title={'Artifacts'}
+                type={'inner'}
+            >
+                <Card.Grid>
+                    <Statistic title={'Rarity'} value={character.weapon?.rarity} />
+                </Card.Grid>
+                <Card.Grid>
+                    <Statistic title={'Rarity'} value={character.weapon?.rarity} />
+                </Card.Grid>
+                <Card.Grid>
+                    <Statistic title={'Level'} value={character.weapon?.level} />
+                </Card.Grid>
+                <Card.Grid>
+                    <Statistic title={'Level'} value={character.weapon?.level} />
+                </Card.Grid>
+                <Card.Grid>
+                    <Statistic title={'Level'} value={character.weapon?.level} />
                 </Card.Grid>
             </Card>
         </Card>
