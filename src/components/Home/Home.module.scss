@@ -1,0 +1,22 @@
+.main {
+  padding: 24px;
+  min-height: 80vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+.content {
+  margin: 24px 16px 0;
+}
+
+.title {
+  font-weight: 900;
+}
+
+.paragraph {
+  font-size: 18px;
+}

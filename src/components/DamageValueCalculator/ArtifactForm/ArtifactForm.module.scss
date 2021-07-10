@@ -1,0 +1,30 @@
+.artifact {
+  background-color: #ffffff;
+  padding: 1em 2em;
+  border-radius: 5px;
+}
+
+.form {
+  flex: 0 0 25vh;
+  &__header {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    text-align: center;
+    flex: 1;
+  }
+
+  &__close {
+    flex: 0;
+  }
+}
+
+.field {
+  &__prefix {
+    text-align: center;
+    width: 110px;
+    font-weight: 700;
+  }
+}
