@@ -1,6 +1,7 @@
+$bg-color: #1f1f1f;
 .steps {
-  width: fit-content;
-  background-color: #ffffff;
-  padding: 1em;
-  border-radius: 5px;
+    width: fit-content;
+    background-color: $bg-color;
+    padding: 1em;
+    border-radius: 5px;
 }

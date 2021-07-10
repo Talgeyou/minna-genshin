@@ -1,56 +1,58 @@
+$bg-color: #1f1f1f;
+
 .content {
-  background-color: #ffffff;
-  margin: 24px 16px 0;
-  border-radius: 5px;
+    background-color: $bg-color;
+    margin: 24px 16px 0;
+    border-radius: 5px;
 }
 
 .main {
-  // padding: 24px;
-  min-height: 80vh;
-  // background: #ffffff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2em;
+    // padding: 24px;
+    min-height: 80vh;
+    // background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
 }
 
 .control {
-  background-color: #ffffff;
-  padding: 1em;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  gap: 1em;
+    background-color: $bg-color;
+    padding: 1em;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
 }
 
 .forms {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  gap: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 2em;
 }
 
 .character {
-  border-radius: 5px;
-  padding: 2em 15em;
-  background: url("./bg.png") no-repeat right;
-  background-size: cover;
-  height: fit-content;
-  width: 100%;
-  display: flex;
+    border-radius: 5px;
+    padding: 2em 15em;
+    background: url('./bg.png') no-repeat right;
+    background-size: cover;
+    height: fit-content;
+    width: 100%;
+    display: flex;
 
-  align-items: center;
-  gap: 4em;
-  flex-shrink: 1 !important;
+    align-items: center;
+    gap: 4em;
+    flex-shrink: 1 !important;
 }
 
 .artifacts {
-  width: 70%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  //   justify-content: flex-end;
-  gap: 1em;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    //   justify-content: flex-end;
+    gap: 1em;
 }

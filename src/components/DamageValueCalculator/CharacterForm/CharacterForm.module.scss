@@ -1,20 +1,22 @@
+$bg-color: #1f1f1f;
+
 .character {
-  background-color: #ffffff;
-  padding: 1em 3em;
-  border-radius: 5px;
+    background-color: $bg-color;
+    padding: 1em 3em;
+    border-radius: 5px;
 }
 
 .form {
-  flex: 0 0 30vh;
-  &__title {
-    text-align: center;
-  }
+    flex: 0 0 30vh;
+    &__title {
+        text-align: center;
+    }
 }
 
 .field {
-  &__prefix {
-    text-align: center;
-    width: 110px;
-    font-weight: 700;
-  }
+    &__prefix {
+        text-align: center;
+        width: 110px;
+        font-weight: 700;
+    }
 }
