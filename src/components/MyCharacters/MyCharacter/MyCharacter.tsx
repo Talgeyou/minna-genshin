@@ -68,7 +68,7 @@ export const MyCharacter = ({ character }: Props) => {
                 type={'inner'}
             >
                 <Card.Grid>
-                    <span>Name: {character.weapon?.name}</span>
+                    <Statistic title={'Name'} value={character.weapon?.name || ''} />
                 </Card.Grid>
                 <Card.Grid>
                     <Statistic title={'Rarity'} value={character.weapon?.rarity} />
