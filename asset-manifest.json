@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/minna-genshin/static/css/main.10160148.chunk.css",
+    "main.js": "/minna-genshin/static/js/main.6fd03bbb.chunk.js",
+    "main.js.map": "/minna-genshin/static/js/main.6fd03bbb.chunk.js.map",
+    "runtime-main.js": "/minna-genshin/static/js/runtime-main.765ebe51.js",
+    "runtime-main.js.map": "/minna-genshin/static/js/runtime-main.765ebe51.js.map",
+    "static/css/2.acf567b7.chunk.css": "/minna-genshin/static/css/2.acf567b7.chunk.css",
+    "static/js/2.08fdcc89.chunk.js": "/minna-genshin/static/js/2.08fdcc89.chunk.js",
+    "static/js/2.08fdcc89.chunk.js.map": "/minna-genshin/static/js/2.08fdcc89.chunk.js.map",
+    "index.html": "/minna-genshin/index.html",
+    "static/css/2.acf567b7.chunk.css.map": "/minna-genshin/static/css/2.acf567b7.chunk.css.map",
+    "static/css/main.10160148.chunk.css.map": "/minna-genshin/static/css/main.10160148.chunk.css.map",
+    "static/js/2.08fdcc89.chunk.js.LICENSE.txt": "/minna-genshin/static/js/2.08fdcc89.chunk.js.LICENSE.txt",
+    "static/media/DamageValueCalculator.module.scss": "/minna-genshin/static/media/bg.617ded49.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.765ebe51.js",
+    "static/css/2.acf567b7.chunk.css",
+    "static/js/2.08fdcc89.chunk.js",
+    "static/css/main.10160148.chunk.css",
+    "static/js/main.6fd03bbb.chunk.js"
+  ]
+}
