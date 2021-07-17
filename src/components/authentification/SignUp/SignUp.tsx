@@ -1,59 +1,51 @@
-import styles from "./SignUp.module.scss";
-import { Button, Form, Input, Layout, Typography } from "antd";
-import { Header } from "../../common/Header/Header";
-import { LockOutlined, UserOutlined } from "@ant-design/icons";
-import { useAuth, useInput } from "../../../app/hooks";
-import { signUp } from "../../../util/firebase";
-import { Redirect } from "react-router-dom";
+import styles from './SignUp.module.scss';
+import { Button, Form, Input, Typography } from 'antd';
+import { LockOutlined, UserOutlined } from '@ant-design/icons';
+import { useAuth } from '../../../app/hooks';
+import { Redirect } from 'react-router-dom';
+import { signUp } from '../../../util/firebase';
 
-interface Props {}
+export const SignUp = () => {
+    const { currentUser } = useAuth(null);
 
-export const SignUp = (props: Props) => {
-  const { currentUser } = useAuth(null);
-  const email = useInput("");
-  const password = useInput("");
+    const onFinish = (values: any) => {
+        signUp(values.email, values.password);
+    };
 
-  const handleSignUpButtonClick = () => {
-    signUp(email.value, password.value);
-  };
+    if (currentUser) {
+        return <Redirect to={'/'} />;
+    }
 
-  if (currentUser) {
-    return <Redirect to={"/"} />;
-  }
-
-  return (
-    <div>
-      <Header title={"Sign Up"} />
-      <Layout.Content className={styles.content}>
-        <div className={styles.main}>
-          <Form>
-            <Typography.Title className={styles.title}>
-              Sign Up
-            </Typography.Title>
-            <Form.Item>
-              <Input
-                type={"email"}
-                placeholder={"Email"}
-                prefix={<UserOutlined />}
-                {...email}
-              />
+    return (
+        <Form onFinish={onFinish}>
+            <Typography.Title className={styles.title}>Sign Up</Typography.Title>
+            <Form.Item
+                name="email"
+                rules={[{ required: true, message: 'Please input your email!' }]}
+            >
+                <Input type={'email'} placeholder={'Email'} prefix={<UserOutlined />} />
             </Form.Item>
-            <Form.Item>
-              <Input
-                type={"password"}
-                placeholder={"Password"}
-                prefix={<LockOutlined />}
-                {...password}
-              />
+            <Form.Item
+                name="password"
+                rules={[{ required: true, message: 'Please input your password!' }]}
+            >
+                <Input type={'password'} placeholder={'Password'} prefix={<LockOutlined />} />
+            </Form.Item>
+            <Form.Item
+                name="confirmPassword"
+                rules={[{ required: true, message: 'Please confirm your password!' }]}
+            >
+                <Input
+                    type={'password'}
+                    placeholder={'Confirm Password'}
+                    prefix={<LockOutlined />}
+                />
             </Form.Item>
             <Form.Item className={styles.button}>
-              <Button type={"primary"} onClick={handleSignUpButtonClick}>
-                Sign Up
-              </Button>
+                <Button type={'primary'} htmlType="submit">
+                    Sign Up
+                </Button>
             </Form.Item>
-          </Form>
-        </div>
-      </Layout.Content>
-    </div>
-  );
+        </Form>
+    );
 };

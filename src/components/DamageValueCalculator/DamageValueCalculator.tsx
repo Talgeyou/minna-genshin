@@ -1,7 +1,6 @@
 import styles from './DamageValueCalculator.module.scss';
-import { Button, Layout } from 'antd';
+import { Button } from 'antd';
 import CharacterForm from './CharacterForm/CharacterForm';
-import { Header } from '../common/Header/Header';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../app/store';
 import { addArtifact, resetArtifacts } from '../../app/artifactsSlice';
